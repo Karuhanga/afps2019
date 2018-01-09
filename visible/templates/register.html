@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Register{% endblock title %}
+{% block register-2 %} active{% endblock register-2 %}
+{% block register %} active{% endblock register %}
+
+{% block content %}
+
+<section class="page-title-section section-padding">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+        <h2 class="page-tagline">It's a date</h2>
+        <h1 class="page-title">Register</h1>
+        </div>
+        </div>
+        </div>
+</section>
+
+
+
+<section class="matrl-about-section section-padding section-dark">
+        <div class="container">
+            <div class="row">
+                <!--Form Goes Here-->
+                <iframe id="registration-form" src="https://google.com" frameborder="0"></iframe>
+            </div>
+
+
+        </div>
+</section>
+
+<section class="work-counter-section section-padding">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                        <h1 class="section-title">In</h1>
+                        </div>
+                        </div>
+        <div class="row">
+        <div class="col-md-6 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".3s">
+        <div class="counter">
+        <div class="icon"><i class="material-icons mdi mdi-clock"></i></div>
+        <div class="timer">200</div>
+        <p>Days</p>
+        <h3>Registration Closes</h3>
+        </div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".4s">
+        <div class="counter">
+        <div class="icon"><i class="material-icons mdi mdi-calendar"></i></div>
+        <div class="timer">215</div>
+        <p>Days</p>
+        <h3>Opening Ceremony</h3>
+        </div>
+        </div>
+        
+        </div>
+        </div>
+        </section>
+
+{% endblock content %}

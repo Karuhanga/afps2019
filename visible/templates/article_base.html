@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block blog-2 %} active{% endblock blog-2 %}
+{% block blog %} active{% endblock blog %}
+
+{% block content %}
+
+
+<section class="page-title-section section-padding">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2 class="page-tagline">Title of the</h2>
+<h1 class="page-title">Article</h1>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="matrl-blog-post-page section-padding">
+<div class="container">
+<div class="row">
+
+<div class="single-blog-page col-md-12 col-lg-12 col-xs-12">
+<article class="single-post wow fadeInUp animated" data-wow-delay=".2s">
+<div class="post-image">
+<img src='{% static "images/slider/slide1.jpg" %}' class="img-fluid" alt="">
+</div>
+{% block article-content %}
+{% endblock article-content %}
+<div class="single-post-meta">
+<div class="post-tag">
+<i class="material-icons mdi mdi-bookmark-outline"></i>
+</div>
+</div>
+</article>
+
+</div>
+
+<div class="col-md-12 col-lg-4 col-xs-12 blog-sidebar-column">
+
+
+</div>
+
+</div>
+</div>
+</section>
+
+{% endblock content %}
