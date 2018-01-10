@@ -25,7 +25,7 @@ SECRET_KEY = '=n&n3&l)gf6ymawy%+7wc8_n1(!-#6j($@1dm9dz+h)jclge#h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['afps2019.herokuapp.com']
+ALLOWED_HOSTS = ['afps2019.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -128,4 +128,4 @@ STATICFILES_DIRS= [
 ]
 
 STATIC_ROOT= os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
