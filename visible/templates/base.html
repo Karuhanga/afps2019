@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>{% block title %}{% endblock title %} | African Pharmaceutical Symposium</title>
 
+<!-- Find CDNs for these -->
 <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
 
 <link rel="stylesheet" href='{% static "css/materialdesignicons.min.css" %}'>
@@ -19,6 +20,10 @@
 
 <link rel="stylesheet" href='{% static "css/magnific-popup.css" %}'>
 
+<link rel="stylesheet" href='{% static "css/responsive.css" %}'>
+
+<link rel="stylesheet" href='{% static "css/color-switcher.css" %}'>
+
 <link rel="stylesheet" href='{% static "css/settings.css" %}'>
 
 <link rel="stylesheet" href='{% static "css/slicknav.css" %}'>
@@ -28,10 +33,6 @@
 <link rel="stylesheet" href='{% static "css/style.css" %}'>
 
 <link rel="stylesheet" href='{% static "css/touchup.css" %}'>
-
-<link rel="stylesheet" href='{% static "css/responsive.css" %}'>
-
-<link rel="stylesheet" href='{% static "css/color-switcher.css" %}'>
 
 <link rel="stylesheet" type="text/css" href='{% static "css/colors/blue.css"%}' media="screen" />
 </head>
@@ -63,8 +64,8 @@ Register
 </a>
 </li>
 <li class="nav-item{% block hospitality-2 %}{% endblock hospitality-2 %}">
-<a class="nav-link" href="/hospitality" aria-haspopup="true" aria-expanded="false">
-Hospitality
+<a class="nav-link" href="/event_guide" aria-haspopup="true" aria-expanded="false">
+Event Guide
 </a>
 </li>
 <li class="nav-item{% block blog-2 %}{% endblock blog-2 %}">
@@ -89,8 +90,8 @@ Register
 </a>
 </li>
 <li>
-<a class="{% block hospitality %}{% endblock hospitality %}" href="/hospitality">
-Hospitality
+<a class="{% block hospitality %}{% endblock hospitality %}" href="/event_guide">
+Event Guide
 </a>
 </li>
 <li>
@@ -124,7 +125,7 @@ Blog
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/register">Register</a></li>
-<li><a href="/hospitality">Hospitality</a></li>
+<li><a href="/event_guide">Event Guide</a></li>
 <li><a href="/blog">Blog</a></li>
 </ul>
 </div>
@@ -137,7 +138,7 @@ Blog
 <div class="container">
 <div class="row">
 <div class="col-md-12 text-center">
-<p>&copy; 2018. Designed with <i class="mdi mdi-heart"></i> by <a id="me" class="a-legant" href="https://linkedin.com/Karuhanga">Karuhanga</a></p>
+<p>&copy; 2018. With <i class="mdi mdi-heart"></i> from <a id="me" class="a-legant" href="https://linkedin.com/Karuhanga">Karuhanga</a></p>
 </div>
 </div>
 </div>

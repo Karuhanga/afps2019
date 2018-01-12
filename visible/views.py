@@ -11,9 +11,9 @@ def home(request):
 def register(request):
     return render(request, "register.html", {})
 
-#View for Hospitality
-def hospitality(request):
-    return render(request, "hospitality.html", {})
+#View for Event Guide
+def event_guide(request):
+    return render(request, "event_guide.html", {})
 
 #View for Blog
 def blog(request):
