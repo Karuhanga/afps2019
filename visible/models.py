@@ -77,6 +77,9 @@ class Partner(models.Model):
 	link_to_site = models.CharField(max_length=100)
 	image = models.ImageField(upload_to='partners')
 
+	def __str__(self):
+		return self.name
+
 class Ad(models.Model):
 	content = models.CharField(max_length=60)
 	image = models.ImageField(upload_to='ads')
