@@ -120,8 +120,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
-MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
+# MEDIA_URL = '/media/'
 
 
 # Static files (CSS, JavaScript, Images)
