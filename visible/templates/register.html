@@ -6,109 +6,98 @@
 
 {% block content %}
 
-<section class="page-title-section section-padding">
+    <section class="page-title-section section-padding">
         <div class="container">
-        <div class="row">
-        <div class="col-md-12">
-        <h2 class="page-tagline">It's a date</h2>
-        <h1 class="page-title">Register</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="page-tagline">It's a date</h2>
+                    <h1 class="page-title">Register</h1>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-</section>
+    </section>
 
 
 
-<section class="matrl-about-section section-padding section-dark">
+    <section class="matrl-about-section section-padding section-dark">
         <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-xs-12 col-lg-9 wow animated fadeInUp">
-                <!--Form Goes Here-->
-                <iframe id="registration_form" src="https://docs.google.com/forms/d/e/1FAIpQLSc1b_xVK1dahc0HSPLYOJhzH_SkoM18s7zAVqNsba1kzn9GKA/viewform?embedded=true" width="100%" height="2000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-lg-9 wow animated fadeInUp">
+                    <!--Form Goes Here-->
+                    <iframe id="registration_form" src="{{ link_to_reg }}" width="100%" height="2000" frameborder="0"
+                            marginheight="0" marginwidth="0">Loading...
+                    </iframe>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-lg-3 blog-sidebar-column">
+                    <div class="row">
+                        {% for ad1, ad2 in ads %}
+
+                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp"
+                                   data-wow-delay=".3s">
+                                <div class="featured-image">
+                                    <a href="{{ ad1.link_to_details }}">
+                                        <img class="ad-image" src='{{ ad1.image.url }}' alt="">
+                                    </a>
+                                </div>
+                                <div class="subscribe-box">
+                                    {{ ad1.content }}
+
+                                </div>
+                            </aside>
+                            <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
+
+                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp"
+                                   data-wow-delay=".3s">
+                                <div class="featured-image">
+                                    <a href="{{ ad2.link_to_details }}">
+                                        <img class="ad-image" src='{{ ad2.image.url }}' alt="">
+                                    </a>
+                                </div>
+                                <div class="subscribe-box">
+                                    {{ ad2.content }}
+
+                                </div>
+                            </aside>
+                        {% endfor %}
+                    </div>
+
+                </div>
             </div>
 
-            <div class="col-md-12 col-xs-12 col-lg-3 blog-sidebar-column">
-                <div class="row">
-                    <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                        <div class="subscribe-box">
-                        <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                        
-                        </div>
-                        </aside>
-                        <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
-                        
-                        <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                            <div class="subscribe-box">
-                            <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                            
-                            </div>
-                            </aside>
-                        
-                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                <div class="subscribe-box">
-                                <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                
-                                </div>
-                                </aside>
-                                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
-                                
-                                <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                    <div class="subscribe-box">
-                                    <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                    
-                                    </div>
-                                    </aside>
-                              
-                                    <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                        <div class="subscribe-box">
-                                        <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                        
-                                        </div>
-                                        </aside>
-                                        <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
-                                        
-                                        <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                            <div class="subscribe-box">
-                                            <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                            
-                                            </div>
-                                            </aside>
-                </div>
-              
-              </div>
         </div>
+    </section>
 
-        </div>
-</section>
-
-<section class="work-counter-section section-padding">
+    <section class="work-counter-section section-padding">
         <div class="container">
-                <div class="row">
-                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                        <h1 class="section-title">In</h1>
-                        </div>
-                        </div>
-        <div class="row">
-        <div class="col-md-6 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".3s">
-        <div class="counter">
-        <div class="icon"><i class="material-icons mdi mdi-clock"></i></div>
-        <div class="timer">200</div>
-        <p>Days</p>
-        <h3>Registration Closes</h3>
+            <div class="row">
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">In</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 work-counter-widget text-center wow animated fadeInUp"
+                     data-wow-delay=".3s">
+                    <div class="counter">
+                        <div class="icon"><i class="material-icons mdi mdi-clock"></i></div>
+                        <div class="timer">{{ reg_end }}</div>
+                        <p>Days</p>
+                        <h3>Registration Closes</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 work-counter-widget text-center wow animated fadeInUp"
+                     data-wow-delay=".4s">
+                    <div class="counter">
+                        <div class="icon"><i class="material-icons mdi mdi-calendar"></i></div>
+                        <div class="timer">{{ days_to }}</div>
+                        <p>Days</p>
+                        <h3>Opening Ceremony</h3>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        </div>
-        
-        <div class="col-md-6 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".4s">
-        <div class="counter">
-        <div class="icon"><i class="material-icons mdi mdi-calendar"></i></div>
-        <div class="timer">215</div>
-        <p>Days</p>
-        <h3>Opening Ceremony</h3>
-        </div>
-        </div>
-        
-        </div>
-        </div>
-        </section>
+    </section>
 
 {% endblock content %}

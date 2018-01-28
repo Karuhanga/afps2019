@@ -6,422 +6,255 @@
 
 {% block content %}
 
-<section class="page-title-section section-padding">
+    <section class="page-title-section section-padding">
         <div class="container">
-        <div class="row">
-        <div class="col-md-12">
-        <h1 class="page-title">Event Guide</h1>
-        </div>
-        </div>
-        </div>
-</section>
-
-<section class="team section-padding">
-    <div class="container">
-    <div class="row"> 
-        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-            <h1 class="section-title">Schedule</h1>
-        </div>
-    </div>
-
-    <div class="row"> 
-            <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
-                <h3 class="text-center subtitle">Leaders in Training</h3>
-                <div class="hr"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-title">Event Guide</h1>
+                </div>
             </div>
-    </div>
+        </div>
+    </section>
 
-    <div class="row big-font section-padding">
-        
-        <div class="card-1 col-md-9 col-lg-9 col-xl-9 wow animated fadeInUp" data-wow-delay=".2s">
-                <div class="padding about-single">
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Schedule</h1>
+                </div>
+            </div>
+            {% if schedule.0 %}
+
+            <div class="row">
+
+                <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
+                    <h3 class="text-center subtitle">{{schedule.0.title}}</h3>
+                    <div class="hr"></div>
+                </div>
+            </div>
+
+            <div class="row big-font section-padding">
+
+                <div class="card-1 col-md-9 col-lg-9 col-xl-9 wow animated fadeInUp" data-wow-delay=".2s">
+                    <div class="padding about-single">
                         <div class="empty-space aqua"></div>
-                        <p>This training is aimed at equipping the delegates with leadership and managerial skills
-                                        that are required to take on global roles in health provision and engage in policy
-                                        making.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus sit amet, consectetur adipisicing elit</p>
+                        {{ schedule.0.short_summary }}
+                    </div>
                 </div>
-        </div>
 
-        <div class="col-md-1 col-lg-1 col-xl-1"></div>
+                <div class="col-md-1 col-lg-1 col-xl-1"></div>
 
-        <div class="col-md-2 col-lg-2 col-xl-2 wow animated fadeInRight" data-wow-delay=".2s">
-                <div class="row">
+                <div class="col-md-2 col-lg-2 col-xl-2 wow animated fadeInRight" data-wow-delay=".2s">
+                    <div class="row">
                         <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
                             <div class="about-single">
-                            <i class="material-icons mdi mdi-calendar"></i>
-                            <p>16<sup>th</sup> June '19</p>
+                                <i class="material-icons mdi mdi-calendar"></i>
+                                <p>{{ schedule.0.date }}</p>
                             </div>
                         </div>
-                </div>
-                <div class="row">
+                    </div>
+                    <div class="row">
                         <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
                             <div class="about-single">
-                            <i class="material-icons mdi mdi-cash"></i>
-                            <p>$250</p>
+                                <i class="material-icons mdi mdi-cash"></i>
+                                <p>{{ schedule.0.cost }}</p>
                             </div>
                         </div>
+                    </div>
                 </div>
-        </div>
-    </div>
-
-    <div class="row"> 
-            <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
-                <h3 class="text-center subtitle">Main Symposium</h3>
-                <div class="hr"></div>
             </div>
-    </div>
 
-    <div class="row big-font section-padding">
-    
-            <div class="col-md-2 col-lg-2 col-xl-2 wow animated fadeInRight" data-wow-delay=".2s">
+                {% endif %}
+
+        {% if schedule.1 %}
+
+            <div class="row">
+                <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
+                    <h3 class="text-center subtitle">{{ schedule.1.title }}</h3>
+                    <div class="hr"></div>
+                </div>
+            </div>
+
+            <div class="row big-font section-padding">
+
+                <div class="col-md-2 col-lg-2 col-xl-2 wow animated fadeInRight" data-wow-delay=".2s">
                     <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
-                                <div class="about-single">
+                        <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
+                            <div class="about-single">
                                 <i class="material-icons mdi mdi-calendar"></i>
-                                <p>16<sup>th</sup> June '19</p>
-                                </div>
+                                <p>{{ schedule.1.date }}</p>
                             </div>
+                        </div>
                     </div>
                     <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
-                                <div class="about-single">
+                        <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
+                            <div class="about-single">
                                 <i class="material-icons mdi mdi-cash"></i>
-                                <p>$250</p>
-                                </div>
+                                <p>{{ schedule.1.cost }}</p>
                             </div>
+                        </div>
                     </div>
-            </div>
+                </div>
 
-            <div class="col-md-1 col-lg-1 col-xl-1"></div>
-        
-            <div class="card-1 col-md-9 col-lg-9 col-xl-9 wow animated fadeInUp" data-wow-delay=".2s">
+                <div class="col-md-1 col-lg-1 col-xl-1"></div>
+
+                <div class="card-1 col-md-9 col-lg-9 col-xl-9 wow animated fadeInUp" data-wow-delay=".2s">
                     <div class="padding about-single">
-                            <div class="empty-space aqua"></div>
-                            <p>We will have keynote speeches, workshops, an industrial visit, concurrent public health
-                                        campaigns and a mentorship session for secondary school students. During one of the
-                                        afternoons, delegates will be taken to see the National museum, the Kasubi Tombs in Kampala and other historical and tourist centres.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <div class="empty-space aqua"></div>
+                        {{ schedule.1.short_summary }}
                     </div>
+                </div>
+
             </div>
 
-        </div>
+            {% endif %}
+            {% if schedule.2 %}
 
-    <div class="row"> 
-            <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
-                <h3 class="text-center subtitle">Post Symposium Tour</h3>
-                <div class="hr"></div>
+            <div class="row">
+                <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
+                    <h3 class="text-center subtitle">{{ schedule.2.title }}</h3>
+                    <div class="hr"></div>
+                </div>
             </div>
-    </div>
 
-    <div class="row big-font section-padding">
-        
-            <div class="card-1 col-md-9 col-lg-9 col-xl-9 wow animated fadeInUp" data-wow-delay=".2s">
+            <div class="row big-font section-padding">
+
+                <div class="card-1 col-md-9 col-lg-9 col-xl-9 wow animated fadeInUp" data-wow-delay=".2s">
                     <div class="padding about-single">
-                            <div class="empty-space aqua"></div>
-                            <p>Delegates would have the opportunity to tour the beautiful Ugandan cities and tourist
-                                        attractions.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                        <div class="empty-space aqua"></div>
+                        {{ schedule.2.short_summary }}
                     </div>
-            </div>
-    
-            <div class="col-md-1 col-lg-1 col-xl-1"></div>
-    
-            <div class="col-md-2 col-lg-2 col-xl-2 wow animated fadeInRight" data-wow-delay=".2s">
+                </div>
+
+                <div class="col-md-1 col-lg-1 col-xl-1"></div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 wow animated fadeInRight" data-wow-delay=".2s">
                     <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
-                                <div class="about-single">
+                        <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
+                            <div class="about-single">
                                 <i class="material-icons mdi mdi-calendar"></i>
-                                <p>16<sup>th</sup> June '19</p>
-                                </div>
+                                <p>{{schedule.2.date}}</p>
                             </div>
+                        </div>
                     </div>
                     <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
-                                <div class="about-single">
+                        <div class="col-md-12 col-lg-12 col-xl-12" data-wow-delay=".2s">
+                            <div class="about-single">
                                 <i class="material-icons mdi mdi-cash"></i>
-                                <p>$250</p>
-                                </div>
+                                <p>{{ schedule.2.cost }}</p>
                             </div>
+                        </div>
                     </div>
+                </div>
             </div>
+            {% endif %}
+
         </div>
+    </section>
 
-      
-    </div>
-</section>
-
-<section class="matrl-about-section section-padding section-dark">
+    <section class="matrl-about-section section-padding section-dark">
         <div class="container">
-                <div class="row">
-            
-                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                        <h1 class="section-title">Immigration in a second</h1>
-                        </div>
-                        </div>
+            <div class="row">
 
-        <div class="big-font text-center row">
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Immigration in a second</h1>
+                </div>
+            </div>
+
+            <div class="big-font text-center row">
                 <div class="col-md-3 col-lg-3 col-xl-3">
                 </div>
-            <div class="col-md-6 col-lg-6 col-xl-6">
-                    Uganda has a fairly progressive immigration procedure. We've tried to break it down for you but feel free to dig into the <a class="a-legant" href="javascript:void(0)"> blog post </a> on this topic.
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    Uganda has a fairly progressive immigration procedure. We've tried to break it down for you but feel
+                    free to dig into the <a class="a-legant" href="javascript:void(0)"> blog post </a> on this topic.
+                </div>
             </div>
-        </div>
-        <div class="row section-padding">
-        
-        <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".2s">
-        <div class="about-single">
-        <i class="material-icons mdi mdi-airplane"></i>
-        <h2 class="subtitle">Start in time</h2>
-        <p>We all love procrastination. Don't we? This is one of those times when it'll really hurt. Processing all the documents takes about a month. Keep that in mind.</p>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".3s">
-        <div class="about-single">
-        <i class="material-icons mdi mdi-airballoon"></i>
-        <h2 class="subtitle">Start in time</h2>
-        <p>We all love procrastination. Don't we? This is one of those times when it'll really hurt. Processing all the documents takes about a month. Keep that in mind.</p>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".4s">
-        <div class="about-single">
-        <i class="material-icons mdi mdi-clock"></i>
-        <h2 class="subtitle">Start in time</h2>
-        <p>We all love procrastination. Don't we? This is one of those times when it'll really hurt. Processing all the documents takes about a month. Keep that in mind.</p>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".5s">
-        <div class="about-single">
-        <i class="material-icons mdi mdi-alert"></i>
-        <h2 class="subtitle">Start in time</h2>
-        <p>We all love procrastination. Don't we? This is one of those times when it'll really hurt. Processing all the documents takes about a month. Keep that in mind.</p>
-        </div>
-        </div>
-        </div>
-
-        <div class="row mt-4 wow animated fadeInUp" data-wow-delay=".3s">
-                <div class="col-md-12 text-center">
-                <a href="javascript:void(0)" class="animated4 btn btn-common" data-ripple-color="#000"><div class="ripple-container"></div>Details <i class="material-icons mdi mdi-arrow-right"></i></a>
-                </div>
-                </div>
-        </div>
-        </section>
-
-        <section class="matrl-about-section section-padding">
-                <div class="container">
-                        <div class="row">
-                    
-                                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                                <h1 class="section-title">Venue and Location</h1>
-                                </div>
-                                </div>
-        
-                <div class="big-font text-center row">
-                        <div class="col-md-3 col-lg-3 col-xl-3">
-                        </div>
-                    <div class="col-md-6 col-lg-6 col-xl-6">
-                            The event will be held at the College of Health and Sciences, Makerere University.
+            <div class="row section-padding">
+                {% for guide in immigration_guides %}
+                <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".2s">
+                    <div class="about-single">
+                        <i class="material-icons mdi mdi-checkbox-marked-circle-outline"></i>
+                        <h2 class="subtitle">{{ guide.title }}</h2>
+                        <p>{{ guide.content }}</p>
                     </div>
                 </div>
+                {% endfor %}
+            </div>
 
-                <div class="row">
-                        <iframe id="venue-map" src="https://google.com" frameborder="0"></iframe>
+            <div class="row mt-4 wow animated fadeInUp" data-wow-delay=".3s">
+                <div class="col-md-12 text-center">
+                    <a href="javascript:void(0)" class="animated4 btn btn-common" data-ripple-color="#000">
+                        <div class="ripple-container"></div>
+                        Details <i class="material-icons mdi mdi-arrow-right"></i></a>
                 </div>
-                <div class="row section-padding">
-                    
-                    <div id="map"></div>
-                
-                </div>
-                </div>
-                </section>
+            </div>
+        </div>
+    </section>
 
-<section class="team section-padding section-dark">
+    <section class="matrl-about-section section-padding">
         <div class="container">
-                <div class="row">
-    
-                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                        <h1 class="section-title">Meet the team</h1>
-                        </div>
-                        </div>
-        <div class="row">
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".1s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">JohnBrebeuf Murungi</h2>
-        <p>Co-Founder</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4  wow fadeInUp animated" data-wow-delay=".2s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">Emma Mukasa</h2>
-        <p>Graphic Designer</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".3s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">Leson Ssetaba</h2>
-        <p>SEO Speacialist</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".4s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">John Hope Ssemaganda</h2>
-        <p>Head Of Ideas</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".5s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">Joshua Kibwika</h2>
-        <p>Co-Founder</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".6s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">Joshua Kibwika</h2>
-        <p>Graphic Designer</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".7s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">Joshua Kibwika</h2>
-        <p>SEO Speacialist</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".8s">
-        <div class="single-team-widget">
-        <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-        <div class="team-member-info">
-        <div class="know-more">
-        <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-        </div>
-        <h2 class="subtitle">Joshua Kibwika</h2>
-        <p>Head Of Ideas</p>
-        <div class="social-profiles">
-        <a href="#"><i class="mdi mdi-twitter"></i></a>
-        <a href="#"><i class="mdi mdi-facebook"></i></a>
-        <a href="#"><i class="mdi mdi-dribbble"></i></a>
-        <a href="#"><i class="mdi mdi-linkedin"></i></a>
-        </div>
-        </div>
-        </div>
-        </div>
+            <div class="row">
 
-        <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".8s">
-                <div class="single-team-widget">
-                <img src='{% static "images/team/team1.jpg" %}' class="img-fluid" alt="">
-                <div class="team-member-info">
-                <div class="know-more">
-                <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Venue and Location</h1>
                 </div>
-                <h2 class="subtitle">Joshua Kibwika</h2>
-                <p>Head Of Ideas</p>
-                <div class="social-profiles">
-                <a href="#"><i class="mdi mdi-twitter"></i></a>
-                <a href="#"><i class="mdi mdi-facebook"></i></a>
-                <a href="#"><i class="mdi mdi-dribbble"></i></a>
-                <a href="#"><i class="mdi mdi-linkedin"></i></a>
-                </div>
-                </div>
-                </div>
-                </div>
+            </div>
 
-        
+            <div class="big-font text-center row">
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    The event will be held at the College of Health and Sciences, Makerere University.
+                </div>
+            </div>
+
+            <div class="row">
+                <iframe id="venue-map" src="https://google.com" frameborder="0"></iframe>
+            </div>
+            <div class="row section-padding">
+
+                <div id="map"></div>
+
+            </div>
         </div>
+    </section>
+
+    <section class="team section-padding section-dark">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Meet the team</h1>
+                </div>
+            </div>
+            <div class="row">
+
+                {% for member in team %}
+
+                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".1s">
+                    <div class="single-team-widget">
+                        <img src='{{ member.image.url }}' class="img-fluid" alt="{{ member.name }}">
+                        <div class="team-member-info">
+                            <div class="know-more">
+                                <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i
+                                        class="material-icons mdi mdi-arrow-right"></i>
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </div>
+                            <h2 class="subtitle">{{ member.name }}</h2>
+                            <p>{{ member.role }}</p>
+                            <div class="social-profiles">
+                                <a href="{{ team.twitter_link }}"><i class="mdi mdi-twitter"></i></a>
+                                <a href="{{ team.facebook_link }}"><i class="mdi mdi-facebook"></i></a>
+                                <a href="{{ team.linkedIn_link }}"><i class="mdi mdi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
         </div>
-        </section>
+    </section>
 
 {% endblock content %}

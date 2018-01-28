@@ -16,11 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from visible import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('register', views.register, name='register'),
-    path('event_guide', views.event_guide, name='event_guide'),
-    path('blog/', include('visible.urls')),
+    path('', views.home),
+    path('register/', views.register),
+    path('event_guide/', views.event_guide),
+    path('blog/', views.blog),
+    path('article/<slug>', views.article),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

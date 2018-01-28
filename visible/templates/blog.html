@@ -7,349 +7,186 @@
 {% block content %}
 
 
-<section class="page-title-section section-padding">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<h2 class="page-tagline">Stay in touch with</h2>
-<h1 class="page-title">The Blog</h1>
-</div>
-</div>
-</div>
-</section>
+    <section class="page-title-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="page-tagline">Stay in touch with</h2>
+                    <h1 class="page-title">The Blog</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<section class="matrl-blog-post-page section-padding">
-<div class="container">
-<div class="row">
+    <section class="matrl-blog-post-page section-padding">
+        <div class="container">
+            <div class="row">
 
-<div class="col-md-12 col-lg-9 col-xs-12 blog-post-column">
-<div class="row">
+                <div class="col-md-12 col-lg-9 col-xs-12 blog-post-column">
+                    <div class="row">
 
-<div class="col-md-6 no-padding">
+                        <div class="col-md-6 no-padding">
 
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
-<article class="single-blog-post">
+                            {% for post in odd_posts %}
 
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured1.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Jan 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">MUSIC for refreshment</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12  wow animated fadeInUp" data-wow-delay=".3s">
-<article class="single-blog-post post-without-image">
-
-<div class="featured-image blue-bg">
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Feb 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">Kelly Grover</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".4s">
-<article class="single-blog-post">
-
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured2.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Mar 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">We support your custom</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".5s">
-<article class="single-blog-post">
-
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured3.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>April 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">We love photography</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12  wow animated fadeInUp" data-wow-delay=".6s">
-<article class="single-blog-post">
-
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured4.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Jun 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">We support your custom</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-</div>
-
-<div class="col-md-6 no-padding">
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
-<article class="single-blog-post post-without-image quote-post">
-
-<div class="featured-image pink-bg">
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Aug 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">We support your custom</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".3s">
-<article class="single-blog-post">
-
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured4.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Sep 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">Kelly Grover</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".5s">
-<article class="single-blog-post post-without-image">
-
-<div class="featured-image aqua-bg">
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Oct 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">Kelly Grover</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".6s">
-<article class="single-blog-post">
-
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured2.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Nov 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">Kelly Grover</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-
-<div class="col-md-12 wow animated fadeInUp" data-wow-delay=".7s">
-<article class="single-blog-post">
-
-<div class="featured-image">
-<a href="#">
-<img src='{% static "images/blog/featured4.jpg" %}' alt="">
-</a>
-</div>
-
-<div class="post-meta">
-<div class="post-date">
-<span><b>Dec 25 2018</b></span>
-</div>
-
-<a href="article">
-<h2 class="subtitle">Kelly Grover</h2>
-</a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-</div>
-<div class="meta-tags">
-<span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-
-<a class="btn btn-round btn-fab" href="article"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-</div>
-</article>
-</div>
-</div>
-
-<!-- <div class="col-md-12 text-center mt-3 blog-pagination wow animated fadeInUp" data-wow-delay=".4s">
-<a href="javascript:void(0)" class="btn btn-common"><i class="material-icons mdi mdi mdi-autorenew"></i> Load More Stories<div class="ripple-container"></div></a>
-</div> -->
-
-</div>
-</div>
+                                {% if post.image %}
 
 
-<div class="col-md-12 col-lg-3 col-xs-12 blog-sidebar-column">
-        <div class="row">
-                <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                    <div class="subscribe-box">
-                    <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                    
-                    </div>
-                    </aside>
-                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
-                    
-                    <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                        <div class="subscribe-box">
-                        <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                        
+                                    <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
+                                        <article class="single-blog-post">
+
+                                            <div class="featured-image">
+                                                <a href="#">
+                                                    <img src='{{ post.image.url }}' alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="post-meta">
+                                                <div class="post-date">
+                                                    <span><b>{{ post.pub_date }}</b></span>
+                                                </div>
+
+                                                <a href="{{ post.get_absolute_url }}">
+                                                    <h2 class="subtitle">{{ post.title }}</h2>
+                                                </a>
+                                                <p>{{ post.too_long_to_read }}</p>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                {% endif %}
+
+                                {% if not post.image %}
+
+                                    <div class="col-md-12  wow animated fadeInUp" data-wow-delay=".3s">
+                                        <article class="single-blog-post post-without-image">
+
+                                            <div class="featured-image blue-bg">
+                                            </div>
+
+                                            <div class="post-meta">
+                                                <div class="post-date">
+                                                    <span><b>{{ post.pub_date }}</b></span>
+                                                </div>
+
+                                                <a href="{{ post.get_absolute_url }}">
+                                                    <h2 class="subtitle">{{ post.title }}</h2>
+                                                </a>
+                                                <p>{{ post.too_long_to_read }}</p>
+                                            </div>
+
+                                        </article>
+                                    </div>
+
+                                {% endif %}
+
+                            {% endfor %}
+
                         </div>
-                        </aside>
-                    
-                        <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                            <div class="subscribe-box">
-                            <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                            
-                            </div>
+
+                        <div class="col-md-6 no-padding">
+
+                            {% for post in even_posts %}
+
+                                {% if post.image %}
+
+
+                                    <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
+                                        <article class="single-blog-post">
+
+                                            <div class="featured-image">
+                                                <a href="#">
+                                                    <img src='{{ post.image.url }}' alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="post-meta">
+                                                <div class="post-date">
+                                                    <span><b>{{ post.pub_date }}</b></span>
+                                                </div>
+
+                                                <a href="{{ post.get_absolute_url }}">
+                                                    <h2 class="subtitle">{{ post.title }}</h2>
+                                                </a>
+                                                <p>{{ post.too_long_to_read }}</p>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                {% endif %}
+
+                                {% if not post.image %}
+
+                                    <div class="col-md-12  wow animated fadeInUp" data-wow-delay=".3s">
+                                        <article class="single-blog-post post-without-image">
+
+                                            <div class="featured-image blue-bg">
+                                            </div>
+
+                                            <div class="post-meta">
+                                                <div class="post-date">
+                                                    <span><b>{{ post.pub_date }}</b></span>
+                                                </div>
+
+                                                <a href="{{ post.get_absolute_url }}">
+                                                    <h2 class="subtitle">{{ post.title }}</h2>
+                                                </a>
+                                                <p>{{ post.too_long_to_read }}</p>
+                                            </div>
+
+                                        </article>
+                                    </div>
+
+                                {% endif %}
+
+                            {% endfor %}
+
+                        </div>
+
+                        <!-- <div class="col-md-12 text-center mt-3 blog-pagination wow animated fadeInUp" data-wow-delay=".4s">
+                        <a href="javascript:void(0)" class="btn btn-common"><i class="material-icons mdi mdi mdi-autorenew"></i> Load More Stories<div class="ripple-container"></div></a>
+                        </div> -->
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 col-lg-3 col-xs-12 blog-sidebar-column">
+                    <div class="row">
+                        {% for ad1, ad2 in ads %}
+
+                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp"
+                                   data-wow-delay=".3s">
+                                <div class="featured-image">
+                                    <a href="{{ ad1.link_to_details }}">
+                                        <img class="ad-image" src='{{ ad1.image.url }}' alt="">
+                                    </a>
+                                </div>
+                                <div class="subscribe-box">
+                                    {{ ad1.content }}
+
+                                </div>
                             </aside>
                             <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
-                            
-                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                <div class="subscribe-box">
-                                <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                
+
+                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp"
+                                   data-wow-delay=".3s">
+                                <div class="featured-image">
+                                    <a href="{{ ad2.link_to_details }}">
+                                        <img class="ad-image" src='{{ ad2.image.url }}' alt="">
+                                    </a>
                                 </div>
-                                </aside>
-                          
-                                <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                    <div class="subscribe-box">
-                                    <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                    
-                                    </div>
-                                    </aside>
-                                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-0"></div>
-                                    
-                                    <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp" data-wow-delay=".3s">
-                                        <div class="subscribe-box">
-                                        <p>Sign up for new Shelver content, updates,<br>surveys & offers.</p>
-                                        
-                                        </div>
-                                        </aside>
+                                <div class="subscribe-box">
+                                    {{ ad2.content }}
+
+                                </div>
+                            </aside>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-</div>
-</div>
-</section>
+        </div>
+    </section>
 
 {% endblock content %}
