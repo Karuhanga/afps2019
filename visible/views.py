@@ -27,13 +27,14 @@ def register(request):
     info = EventInformation.get_event_info()
     days_to = info.get_time_to_event()
     days_left_for_reg = info.get_time_to_reg_end()
-    ads = Ad.get_ads()
+    ads, ad = Ad.get_ads()
 
     payload = {
         'days_to': str(days_to),
         'reg_end': str(days_left_for_reg),
         'link_to_reg': info.link_to_reg_form,
-        'ads': ads
+        'ads': ads,
+        'ad' : ad,
     }
 
     return render(request, "register.html", payload)

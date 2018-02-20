@@ -88,9 +88,12 @@ class Ad(models.Model):
 	def get_ads():
 		ads = Ad.objects.all()
 		ads = list(ads)
+		left_ads = ads[::2]
+		right_ads = ads[1::2]
+		ad = None
 		if not (len(ads) % 2 == 0):
-			ads.pop()
-		return zip(ads[::2], ads[1::2])
+			ad = left_ads.pop()
+		return zip(left_ads, right_ads), ad
 
 class Schedule(models.Model):
 	title = models.CharField(max_length=30)

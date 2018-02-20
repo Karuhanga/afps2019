@@ -60,6 +60,22 @@
                                 </div>
                             </aside>
                         {% endfor %}
+
+                        {% if ad %}
+                            <aside class="col-lg-12 col-md-5 col-sm-5 col-xs-5 single-sidebar-widget subscribe-widget no-padding  wow animated fadeInUp"
+                                   data-wow-delay=".3s">
+                                <div class="featured-image">
+                                    <a href="{{ ad.link_to_details }}">
+                                        <img class="ad-image" src='{{ ad.image.url }}' alt="">
+                                    </a>
+                                </div>
+                                <div class="subscribe-box">
+                                    {{ ad.content }}
+
+                                </div>
+                            </aside>
+                        {% endif %}
+
                     </div>
 
                 </div>
