@@ -57,13 +57,14 @@ def event_guide(request):
 def blog(request):
     posts = Post.objects.all()
     odd_posts = posts[1::2]
-    even_posts = posts[0::2]
-    ads = Ad.get_ads()
+    even_posts = posts[::2]
+    ads, ad = Ad.get_ads()
 
     payload = {
         "odd_posts": odd_posts,
         "even_posts": even_posts,
-        "ads": ads
+        "ads": ads,
+        "ad" : ad,
     }
 
     return render(request, "blog.html", payload)
@@ -71,11 +72,12 @@ def blog(request):
 #View for Article
 def article(request, slug):
     post = Post.objects.get(slug=slug)
-    ads = Ad.get_ads()
+    ads, ad = Ad.get_ads()
 
     payload = {
         'ads': ads,
-        'article': post
+        'article': post,
+        'ad' : ad,
     }
 
     return render(request, "article.html", payload)
