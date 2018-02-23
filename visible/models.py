@@ -85,6 +85,9 @@ class Ad(models.Model):
 	image = models.ImageField(upload_to='ads')
 	link_to_details = models.CharField(max_length=100)
 
+	def __str__(self):
+		return self.content
+
 	def get_ads():
 		ads = Ad.objects.all()
 		ads = list(ads)
