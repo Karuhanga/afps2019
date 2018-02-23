@@ -104,16 +104,15 @@
                     </div>
                 </div>
                 {% endif %}
+                {% if organs %}
                 <div class="card-1 col-md-5 col-lg-5 col-xl-5 wow animated fadeInUp" data-wow-delay=".4s">
                     <div class="about-single">
                         <i class="material-icons mdi mdi-google-circles-communities"></i>
-                        <h2 class="subtitle">Organisers</h2>
-                        <p><a class="a-legant" href="http://pharmacy.go.ug">The Pharmacists Organisation of Uganda</a>,
-                            in collaboration with <a class="a-legant" href="http://pharmacy.go.africa">The Africa
-                                Pharmacists Collective</a> and the <a class="a-legant" href="http://pharmacy.org">International
-                                Organisation of Pharmacists</a> will take charge of this year's event.</p>
+                        <h2 class="subtitle">{{ organs.title }}</h2>
+                        <p>{{organs.words}}</p>
                     </div>
                 </div>
+                {% endif %}
 
                 <div class="col-md-2 col-lg-2 col-xl-2"></div>
                 {% if pre %}
