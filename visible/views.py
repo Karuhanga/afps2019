@@ -13,7 +13,7 @@ def home(request):
             'how': EventSummaryCard.objects.get(title='How'),
             'why': EventSummaryCard.objects.get(title='Why'),
             'pre': EventSummaryCard.objects.get(title='Prerequisites'),
-            'organs': EventSummaryCard.objects.get(title='Organisations'),
+            'organs': EventSummaryCard.objects.get(title='Organisers'),
             'previous': PreviousEdition.objects.all(),
             'partners': Partner.objects.all()
         }
