@@ -48,8 +48,19 @@
 }
 
 #social-media-buttons .btn-fab{
-	background: #2196F3d6 !important;
 	margin-right: 3px;
+}
+
+#facebook{
+	background: #3d5b99d6 !important;
+}
+
+#twitter{
+	background: #1da1f2d6 !important;
+}
+
+#instagram{
+	background: #2196F3d6 !important;
 }
 
 #me{
@@ -74,4 +85,12 @@
 
 .subscribe-box{
 	text-align: center !important;
+}
+
+#slide-67-layer-7{
+	background: #ad231e;
+}
+
+#slide-67-layer-7:hover{
+	background: #ad231e !important;
 }
