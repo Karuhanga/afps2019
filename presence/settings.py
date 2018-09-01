@@ -78,7 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'presence.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -122,9 +121,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
-# MEDIA_URL = '/media/'
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -136,7 +132,15 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+#DEBUG#############################################
+MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
+MEDIA_URL = '/media/'
+###################################################
+
+#PROD##############################################
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
+###################################################
