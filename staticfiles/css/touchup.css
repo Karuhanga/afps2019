@@ -52,11 +52,11 @@
 }
 
 #facebook{
-	background: #3d5b99 !important;
+	background: #3d5b99d6 !important;
 }
 
 #twitter{
-	background: #1da1f2 !important;
+	background: #1da1f2d6 !important;
 }
 
 #instagram{
@@ -93,4 +93,8 @@
 
 #slide-67-layer-7:hover{
 	background: #ad231e !important;
+}
+
+body{
+	background: #fcfcf1 !important;
 }
