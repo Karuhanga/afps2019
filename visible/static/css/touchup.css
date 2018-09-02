@@ -116,3 +116,11 @@ body{
 	color: #ad231e !important;
 	background: unset;
 }
+
+.navbar-brand img {
+	width: 180px;
+}
+
+.navbar-brand {
+	top: 0px;
+}

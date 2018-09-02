@@ -112,7 +112,15 @@ body{
 	background: unset;
 }
 
-.slicknav_nav .active a:hover {
+.slicknav_nav a:hover {
 	color: #ad231e !important;
 	background: unset;
+}
+
+.navbar-brand img {
+	width: 170px;
+}
+
+.navbar-brand {
+	top: 0px;
 }
