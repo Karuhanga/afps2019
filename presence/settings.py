@@ -26,9 +26,6 @@ SECRET_KEY = '=n&n3&l)gf6ymawy%+7wc8_n1(!-#6j($@1dm9dz+h)jclge#h'
 
 ALLOWED_HOSTS = ['afps2019.herokuapp.com', '127.0.0.1']
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
 
@@ -134,13 +131,17 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 #DEBUG#############################################
-# MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
-# MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
+MEDIA_URL = '/media/'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 ###################################################
 
 #PROD##############################################
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
+# DEBUG = False
 ###################################################

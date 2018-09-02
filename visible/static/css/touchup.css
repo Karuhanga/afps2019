@@ -1,13 +1,13 @@
 /*Subtle*/
 .card-1 {
-  background: #f9f9f9;
+  background: #fffdd4;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 1s cubic-bezier(.25,.8,.25,1);
   margin-bottom: 15px !important;
 }
 
 .card-1:hover {
-  background: #fff;
+  background: #fffdd4;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -96,9 +96,23 @@
 }
 
 body{
-	background: #fcfcf1 !important;
+	background: #ffffe4 !important;
 }
 
 .nav-bg{
-	background: #fcfcf1 !important;
+	background: #ffffe4 !important;
+}
+
+.wpb-mobile-menu a{
+
+}
+
+.slicknav_nav .active a {
+	color: #ad231e;
+	background: unset;
+}
+
+.slicknav_nav a:hover {
+	color: #ad231e !important;
+	background: unset;
 }
