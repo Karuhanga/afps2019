@@ -118,9 +118,18 @@ body{
 }
 
 .navbar-brand img {
-	width: 180px;
+	width: 210px;
 }
 
 .navbar-brand {
 	top: 0px;
+}
+
+.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#header {
+	min-height: 125px;
 }
