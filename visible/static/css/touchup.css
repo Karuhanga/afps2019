@@ -133,3 +133,16 @@ body{
 #header {
 	min-height: 125px;
 }
+
+.slicknav_nav {
+	position: relative;
+	z-index: 2;
+}
+
+.slicknav_nav li{
+	background: transparent !important;
+}
+
+.slicknav_menu ul {
+	background: transparent;
+}
