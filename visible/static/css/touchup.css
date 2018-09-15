@@ -146,3 +146,7 @@ body{
 .slicknav_menu ul {
 	background: transparent;
 }
+
+#google_translate_element{
+	text-align: end;
+}
