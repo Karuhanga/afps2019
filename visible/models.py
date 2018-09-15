@@ -17,6 +17,7 @@ class EventInformation(models.Model):
 	link_to_reg_form = models.CharField(max_length=200)
 	link_to_immigration_details = models.CharField(max_length=200)
 
+	@staticmethod
 	def get_event_info():
 		return EventInformation.objects.all()[0]
 
