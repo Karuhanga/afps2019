@@ -45,6 +45,7 @@ def event_guide(request):
 
     try:
         payload = {
+            'event_info': EventInformation.get_event_info(),
             'schedule': list(Schedule.objects.order_by('date')[:3]),
             'immigration_guides': ImmigrationGuide.objects.all(),
             'team': TeamMember.objects.all(),
