@@ -65,7 +65,7 @@ class EventSummaryCard(models.Model):
 class PreviousEdition(models.Model):
 	year = models.CharField(max_length=40)
 	venue = models.CharField(max_length=30)
-	theme = models.CharField(max_length=60)
+	theme = models.CharField(max_length=100)
 	link_to_details = models.CharField(max_length=100)
 	image = models.ImageField(upload_to='previous_events')
 
