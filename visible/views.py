@@ -14,7 +14,7 @@ def home(request):
             'why': EventSummaryCard.objects.get(title='Why'),
             'pre': EventSummaryCard.objects.get(title='Prerequisites'),
             'organs': EventSummaryCard.objects.get(title='Organisers'),
-            'previous': PreviousEdition.objects.all(),
+            'previous': PreviousEdition.objects.order_by('-year').all(),
             'partners': Partner.objects.all()
         }
     except Exception as e:
