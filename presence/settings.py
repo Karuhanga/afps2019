@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '(4mf^(3nz7n=gw=owv2+)j%!rg!1%27^!9n+-s(vgrl826&-t3'
 
-ALLOWED_HOSTS = ['afps2019.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['afps2019.herokuapp.com', '127.0.0.1', 'afps2019.org']
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
