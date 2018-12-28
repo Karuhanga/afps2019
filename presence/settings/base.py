@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import dj_database_url
-from presence.aws.conf import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -59,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "visible/templates")
+            os.path.join(BASE_DIR, "visible/../../visible/templates")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -74,16 +72,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'presence.wsgi.application'
-
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
@@ -125,23 +113,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "visible/static")
+    os.path.join(BASE_DIR, "visible/../../visible/static")
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-#DEBUG#############################################
-# MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
-# MEDIA_URL = '/media/'
-#
-# # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-###################################################
-
-#PROD##############################################
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-DEBUG = False
-###################################################
+STATIC_ROOT = os.path.join(BASE_DIR, "../../staticfiles")

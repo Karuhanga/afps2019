@@ -7,18 +7,15 @@ from .models import *
 #View for home
 def home(request):
     payload = {}
-    try:
-        payload = {
-            'event_info': EventInformation.get_event_info(),
-            'how': EventSummaryCard.objects.get(title='How'),
-            'why': EventSummaryCard.objects.get(title='Why'),
-            'pre': EventSummaryCard.objects.get(title='Prerequisites'),
-            'organs': EventSummaryCard.objects.get(title='Organisers'),
-            'previous': PreviousEdition.objects.order_by('-year').all(),
-            'partners': Partner.objects.all()
-        }
-    except Exception as e:
-        payload = {}
+    payload = {
+        'event_info': EventInformation.get_event_info(),
+        'how': EventSummaryCard.objects.get(title='How'),
+        'why': EventSummaryCard.objects.get(title='Why'),
+        'pre': EventSummaryCard.objects.get(title='Prerequisites'),
+        'organs': EventSummaryCard.objects.get(title='Organisers'),
+        'previous': PreviousEdition.objects.order_by('-year').all(),
+        'partners': Partner.objects.all()
+    }
 
     return render(request, "index.html", payload)
 
