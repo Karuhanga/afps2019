@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'visible',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'storages'
 ]
 
@@ -57,7 +59,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "visible/../../visible/templates")
+            os.path.join(BASE_DIR, "../visible/templates")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -117,3 +119,5 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "../staticfiles")
+
+SITE_ID = 1

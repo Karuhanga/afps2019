@@ -18,14 +18,18 @@ from django.urls import path, include
 from visible import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
+
+from visible.sitemap import sitemaps
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('register/', views.register),
-    path('event_guide/', views.event_guide),
-    path('blog/', views.blog),
-    path('article/<slug>', views.article),
+    path('', views.home, name='home'),
+    path('register/', views.register, name='register'),
+    path('event_guide/', views.event_guide, name='event_guide'),
+    path('blog/', views.blog, name='blog'),
+    path('article/<slug>', views.article, name='article'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
