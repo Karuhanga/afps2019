@@ -14,7 +14,7 @@ def home(request):
         'pre': EventSummaryCard.objects.get(title='Prerequisites'),
         'organs': EventSummaryCard.objects.get(title='Organisers'),
         'previous': PreviousEdition.objects.order_by('-year').all(),
-        'partners': Partner.objects.all()
+        'partners': Partner.objects.order_by('name').all()
     }
 
     return render(request, "index.html", payload)

@@ -89,6 +89,7 @@ class Ad(models.Model):
 	def __str__(self):
 		return self.content
 
+	@staticmethod
 	def get_ads():
 		ads = Ad.objects.all()
 		ads = list(ads)
@@ -111,6 +112,7 @@ class Schedule(models.Model):
 class ImmigrationGuide(models.Model):
 	title = models.CharField(max_length=15)
 	content = models.TextField(max_length=250)
+	icon = models.CharField(max_length=200)
 
 	def __str__(self):
 		return self.title

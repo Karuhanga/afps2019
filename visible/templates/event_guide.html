@@ -152,44 +152,49 @@
         </div>
     </section>
 
-{#    <section class="matrl-about-section section-padding section-dark">#}
-{#        <div class="container">#}
-{#            <div class="row">#}
-{##}
-{#                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">#}
-{#                    <h1 class="section-title">Immigration in a second</h1>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#            <div class="big-font text-center row">#}
-{#                <div class="col-md-3 col-lg-3 col-xl-3">#}
-{#                </div>#}
-{#                <div class="col-md-6 col-lg-6 col-xl-6">#}
-{#                    Uganda has a fairly progressive immigration procedure. We've tried to break it down for you but feel#}
-{#                    free to dig into the <a class="a-legant" href="javascript:void(0)"> blog post </a> on this topic.#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row section-padding">#}
-{#                {% for guide in immigration_guides %}#}
-{#                <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".2s">#}
-{#                    <div class="about-single">#}
-{#                        <i class="material-icons mdi mdi-checkbox-marked-circle-outline"></i>#}
-{#                        <h2 class="subtitle">{{ guide.title }}</h2>#}
-{#                        <p>{{ guide.content }}</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{##}
-{#            <div class="row mt-4 wow animated fadeInUp" data-wow-delay=".3s">#}
-{#                <div class="col-md-12 text-center">#}
-{#                    <a href="javascript:void(0)" class="animated4 btn btn-common" data-ripple-color="#000">#}
-{#                        <div class="ripple-container"></div>#}
-{#                        Details <i class="material-icons mdi mdi-arrow-right"></i></a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
+    <section class="matrl-about-section section-padding section-dark">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Immigration in a second</h1>
+                </div>
+            </div>
+
+            <div class="big-font text-center row">
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    Uganda has a fairly smooth immigration process. <a class="a-legant" href="https://www.worldtravelguide.net/guides/africa/uganda/passport-visa/">World Travel Guide</a> has a helpful section about it. Visit
+                    <a href="https://immigration.go.ug/" class="a-legant">Uganda's Immigration Website</a> for your country's specifics. The visa application page in particular can be found
+                    <a href="https://visas.immigration.go.ug/" class="a-legant">here</a>.
+                </div>
+            </div>
+        <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".2s">
+                    <h3 class="text-center subtitle">Important to remember</h3>
+                    <div class="hr"></div>
+                </div>
+            <div class="row section-padding">
+                {% for guide in immigration_guides %}
+                <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".2s">
+                    <div class="about-single">
+                        <i class="material-icons mdi {{ guide.icon }}"></i>
+                        <h2 class="subtitle">{{ guide.title }}</h2>
+                        <p>{{ guide.content }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="row mt-4 wow animated fadeInUp" data-wow-delay=".3s">
+                <div class="col-md-12 text-center">
+                    <a href="https://immigration.go.ug/" class="animated4 btn btn-common" data-ripple-color="#000">
+                        <div class="ripple-container"></div>
+                        Details <i class="material-icons mdi mdi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="matrl-about-section section-padding section-dark">
         <div class="container">
@@ -208,53 +213,53 @@
                 </div>
             </div>
 
-            <div class="row center">
+            <div id="map" class="row center">
                 <iframe src="{{event_info.link_to_venue_map}}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="row section-padding">
 
-                <div id="map"></div>
+{#                <div id="map"></div>#}
 
             </div>
         </div>
     </section>
 
-    <section class="team section-padding">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                    <h1 class="section-title">Meet the team</h1>
-                </div>
-            </div>
-            <div class="row">
-
-                {% for member in team %}
-
-                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".1s">
-                    <div class="single-team-widget">
-                        <img src='{{ member.image.url }}' class="img-fluid" alt="{{ member.name }}">
-                        <div class="team-member-info">
-                            <div class="know-more">
-                                <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i
-                                        class="material-icons mdi mdi-arrow-right"></i>
-                                    <div class="ripple-container"></div>
-                                </a>
-                            </div>
-                            <h2 class="subtitle">{{ member.name }}</h2>
-                            <p>{{ member.role }}</p>
-                            <div class="social-profiles">
-                                <a href="{{ team.twitter_link }}"><i class="mdi mdi-twitter"></i></a>
-                                <a href="{{ team.facebook_link }}"><i class="mdi mdi-facebook"></i></a>
-                                <a href="{{ team.linkedIn_link }}"><i class="mdi mdi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-
-            </div>
-        </div>
-    </section>
+{#    <section class="team section-padding">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{##}
+{#                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">#}
+{#                    <h1 class="section-title">Meet the team</h1>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{##}
+{#                {% for member in team %}#}
+{##}
+{#                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".1s">#}
+{#                    <div class="single-team-widget">#}
+{#                        <img src='{{ member.image.url }}' class="img-fluid" alt="{{ member.name }}">#}
+{#                        <div class="team-member-info">#}
+{#                            <div class="know-more">#}
+{#                                <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i#}
+{#                                        class="material-icons mdi mdi-arrow-right"></i>#}
+{#                                    <div class="ripple-container"></div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <h2 class="subtitle">{{ member.name }}</h2>#}
+{#                            <p>{{ member.role }}</p>#}
+{#                            <div class="social-profiles">#}
+{#                                <a href="{{ team.twitter_link }}"><i class="mdi mdi-twitter"></i></a>#}
+{#                                <a href="{{ team.facebook_link }}"><i class="mdi mdi-facebook"></i></a>#}
+{#                                <a href="{{ team.linkedIn_link }}"><i class="mdi mdi-linkedin"></i></a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                {% endfor %}#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
 
 {% endblock content %}
