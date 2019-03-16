@@ -224,42 +224,42 @@
         </div>
     </section>
 
-{#    <section class="team section-padding">#}
-{#        <div class="container">#}
-{#            <div class="row">#}
-{##}
-{#                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">#}
-{#                    <h1 class="section-title">Meet the team</h1>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{##}
-{#                {% for member in team %}#}
-{##}
-{#                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".1s">#}
-{#                    <div class="single-team-widget">#}
-{#                        <img src='{{ member.image.url }}' class="img-fluid" alt="{{ member.name }}">#}
-{#                        <div class="team-member-info">#}
-{#                            <div class="know-more">#}
-{#                                <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i#}
-{#                                        class="material-icons mdi mdi-arrow-right"></i>#}
-{#                                    <div class="ripple-container"></div>#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <h2 class="subtitle">{{ member.name }}</h2>#}
-{#                            <p>{{ member.role }}</p>#}
-{#                            <div class="social-profiles">#}
-{#                                <a href="{{ team.twitter_link }}"><i class="mdi mdi-twitter"></i></a>#}
-{#                                <a href="{{ team.facebook_link }}"><i class="mdi mdi-facebook"></i></a>#}
-{#                                <a href="{{ team.linkedIn_link }}"><i class="mdi mdi-linkedin"></i></a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                {% endfor %}#}
-{##}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Meet the team</h1>
+                </div>
+            </div>
+            <div class="row">
+
+                {% for member in team %}
+
+                <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp animated" data-wow-delay=".1s">
+                    <div class="single-team-widget">
+                        <img src='{{ member.image.url }}' class="img-fluid" alt="{{ member.name }}">
+                        <div class="team-member-info">
+                            <div class="know-more">
+                                <a class="btn btn-round btn-fab btn-xs" href="javascript:void(0)"><i
+                                        class="material-icons mdi mdi-arrow-right"></i>
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </div>
+                            <h2 class="subtitle">{{ member.name }}</h2>
+                            <p>{{ member.role }}</p>
+                            <div class="social-profiles">
+                                <a href="{{ team.twitter_link }}"><i class="mdi mdi-twitter"></i></a>
+                                <a href="{{ team.facebook_link }}"><i class="mdi mdi-facebook"></i></a>
+                                <a href="{{ team.linkedIn_link }}"><i class="mdi mdi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
 
 {% endblock content %}
