@@ -45,7 +45,7 @@ def event_guide(request):
             'event_info': EventInformation.get_event_info(),
             'schedule': list(Schedule.objects.order_by('date')[:3]),
             'immigration_guides': ImmigrationGuide.objects.all(),
-            'team': TeamMember.objects.all(),
+            'team': TeamMember.objects.order_by('role').all(),
         }
     except Exception as e:
         payload = {}
