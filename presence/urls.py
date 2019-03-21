@@ -30,7 +30,7 @@ urlpatterns = [
     path('event_guide/', views.event_guide, name='event_guide'),
     path('blog/', views.blog, name='blog'),
     path('article/<slug>', views.article, name='article'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('', views.home),
 ]
 
