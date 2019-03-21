@@ -9,12 +9,13 @@ class EventInformation(models.Model):
 		verbose_name = "Event Information"
 		verbose_name_plural = "Event Information"
 
-	date = models.DateField()
-	registration_closes = models.DateField()
+	date = models.DateField(default=datetime.datetime.now)
+	registration_closes = models.DateField(default=datetime.datetime.now)
 	theme = models.CharField(max_length=200)
 	venue = models.CharField(max_length=200)
 	link_to_venue_map = models.CharField(max_length=200)
 	link_to_reg_form = models.CharField(max_length=200)
+	link_to_abstracts_form = models.CharField(max_length=200, default="")
 	link_to_immigration_details = models.CharField(max_length=200)
 
 	@staticmethod

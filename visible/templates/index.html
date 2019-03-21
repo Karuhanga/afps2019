@@ -125,6 +125,16 @@
                         </div>
                     </div>
                 {% endif %}
+
+                {% if abstracts %}
+                    <div class="card-1 col-md-5 col-lg-5 col-xl-5 wow animated fadeInUp" data-wow-delay=".4s">
+                        <div class="about-single">
+                            <i class="material-icons mdi mdi-school"></i>
+                            <h2 class="subtitle">{{ abstracts.title }}</h2>
+                            <p>{{ abstracts.words }}</p>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </section>

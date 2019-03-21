@@ -9,10 +9,11 @@ def home(request):
     payload = {}
     payload = {
         'event_info': EventInformation.get_event_info(),
-        'how': EventSummaryCard.objects.get(title='How'),
-        'why': EventSummaryCard.objects.get(title='Why'),
-        'pre': EventSummaryCard.objects.get(title='Prerequisites'),
-        'organs': EventSummaryCard.objects.get(title='Organisers'),
+        'how': EventSummaryCard.objects.get_or_create(title='How'),
+        'why': EventSummaryCard.objects.get_or_create(title='Why'),
+        'pre': EventSummaryCard.objects.get_or_create(title='Prerequisites'),
+        'organs': EventSummaryCard.objects.get_or_create(title='Organisers'),
+        'abstracts': EventSummaryCard.objects.get_or_create(title='Call for Abstracts'),
         'previous': PreviousEdition.objects.order_by('-year').all(),
         'partners': Partner.objects.order_by('name').all()
     }
@@ -36,6 +37,15 @@ def register(request):
     }
 
     return render(request, "register.html", payload)
+
+def abstracts(request):
+    info = EventInformation.get_event_info()
+
+    payload = {
+        'link_to_abstracts_form': info.link_to_abstracts_form,
+    }
+
+    return render(request, "abstracts.html")
 
 #View for Event Guide
 def event_guide(request):
