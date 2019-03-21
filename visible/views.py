@@ -9,11 +9,11 @@ def home(request):
     payload = {}
     payload = {
         'event_info': EventInformation.get_event_info(),
-        'how': EventSummaryCard.objects.get_or_create(title='How'),
-        'why': EventSummaryCard.objects.get_or_create(title='Why'),
-        'pre': EventSummaryCard.objects.get_or_create(title='Prerequisites'),
-        'organs': EventSummaryCard.objects.get_or_create(title='Organisers'),
-        'abstracts': EventSummaryCard.objects.get_or_create(title='Call for Abstracts'),
+        'how': EventSummaryCard.objects.get_or_create(title='How')[0],
+        'why': EventSummaryCard.objects.get_or_create(title='Why')[0],
+        'pre': EventSummaryCard.objects.get_or_create(title='Prerequisites')[0],
+        'organs': EventSummaryCard.objects.get_or_create(title='Organisers')[0],
+        'abstracts': EventSummaryCard.objects.get_or_create(title='Call for Abstracts')[0],
         'previous': PreviousEdition.objects.order_by('-year').all(),
         'partners': Partner.objects.order_by('name').all()
     }
