@@ -45,7 +45,7 @@ def abstracts(request):
         'link_to_abstracts_form': info.link_to_abstracts_form,
     }
 
-    return render(request, "abstracts.html")
+    return render(request, "abstracts.html", payload)
 
 #View for Event Guide
 def event_guide(request):
